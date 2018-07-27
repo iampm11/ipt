@@ -2,7 +2,7 @@
 
 ```diff
 - You are born an Original, so don't Copy Code.
-- That said, Use the code at your risk.
+- That said, Use the code at your own risk.
 + Please don't Ctrl+C, Create something Ctrl+N
 ```
 
