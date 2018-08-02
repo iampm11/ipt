@@ -1,10 +1,28 @@
 #include <stdio.h>
-#include <string.h>
 #include <jni.h>
 
-#inlcude "./../lib/Main.h"
+#include "./../lib/MainA.h"
+#include "./../lib/MainB.h"
 
-JNIEXPORT jstring JNICALL Java_Main_concat (JNIEnv * env, jclass jcls, jstring jstra, jstring jstrb) {
+JNIEXPORT void JNICALL Java_MainA_Hello (JNIEnv * env, jclass cls) {
+    printf("Hello From C \n");
+}
+
+JNIEXPORT jint JNICALL Java_MainA_GetNum (JNIEnv * env, jclass cls) {
+    jint n = 99;
+    return n;
+}
+
+JNIEXPORT jint JNICALL Java_MainA_Increment (JNIEnv * env, jclass cls, jint num) {
+    return num + 1;
+}
+
+JNIEXPORT jint JNICALL Java_MainA_Add (JNIEnv * env, jclass cls, jint a, jint b) {
+    return a+b;
+}
+
+
+JNIEXPORT jstring JNICALL Java_MainB_concat (JNIEnv * env, jclass jcls, jstring jstra, jstring jstrb) {
     const char* stra = (*env)->GetStringUTFChars(env, jstra, NULL);
     const char* strb = (*env)->GetStringUTFChars(env, jstrb, NULL);
 
@@ -25,7 +43,7 @@ JNIEXPORT jstring JNICALL Java_Main_concat (JNIEnv * env, jclass jcls, jstring j
     return (*env)->NewStringUTF(env, str);
 }
 
-JNIEXPORT jint JNICALL Java_Main_strlen (JNIEnv * env, jclass jcls, jstring jstr) {
+JNIEXPORT jint JNICALL Java_MainB_strlen (JNIEnv * env, jclass jcls, jstring jstr) {
     const char* str = (*env)->GetStringUTFChars(env, jstr, NULL);
     int len = 0;
     int index = 0;
@@ -36,7 +54,7 @@ JNIEXPORT jint JNICALL Java_Main_strlen (JNIEnv * env, jclass jcls, jstring jstr
     return len;
 }
 
-JNIEXPORT jstring JNICALL Java_Main_strrev (JNIEnv * env, jclass jcls, jstring jstr) {
+JNIEXPORT jstring JNICALL Java_MainB_strrev (JNIEnv * env, jclass jcls, jstring jstr) {
     const char* stra = (*env)->GetStringUTFChars(env, jstr, NULL);
     int len = 0;
     int index = 0;

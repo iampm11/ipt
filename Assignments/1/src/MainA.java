@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class MainA {
     static {
         System.loadLibrary("one");
     }
@@ -11,10 +11,12 @@ public class Main {
     public static native int Add(int a, int b);
 
     public static void main(String[] args) {
-        Main m = new Main();
+        MainA m = new MainA();
         m.Hello();
         System.out.println(m.GetNum());
         System.out.println(m.Increment(10));
         System.out.println(m.Add(10, 20));
+        MainB b = new MainB();
+        b.init();
     }
 }
