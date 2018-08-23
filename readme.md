@@ -4,7 +4,7 @@
 - You are born an Original, so don't Copy Code.
 - That said, Use the code at your own risk.
 + Please don't Ctrl+C, Create something Ctrl+N
-- Exp 4, 5 are not ready... YET.
+- Exp 6, 7, 8 are not ready... YET.
 ```
 
 ## Folder Structure
