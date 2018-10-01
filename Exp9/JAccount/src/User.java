@@ -1,6 +1,6 @@
 public class User {
-    String username;
-    String password;
+    private String username;
+    private String password;
 
     public String getPassword() {
         return password;
@@ -18,10 +18,17 @@ public class User {
         this.username = username;
     }
     
-    User() {}
+    public User() {}
     
-    User(String u, String p) {
+    public User(String u, String p) {
         this.username = u;
-        this.paswword = p;
+        this.password = p;
     }
+    
+    public void print() {
+        System.out.println("User Loged In..");
+        System.out.println("Username = " + username);
+        System.out.println("Password = " + password);
+    }
+    
 }

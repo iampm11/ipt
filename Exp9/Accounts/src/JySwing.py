@@ -4,6 +4,7 @@
 
 from javax.swing import JFrame, JButton, JTextField, JLabel, JPasswordField, JOptionPane
 from com.ziclix.python.sql import zxJDBC
+import User
 
 class Init(object):
     def __init__(self):
@@ -46,6 +47,8 @@ class Init(object):
             if self.connection.fetchone() is None:
                 JOptionPane.showMessageDialog(self.frame,"Wrong Credentials","Alert",JOptionPane.ERROR_MESSAGE)
             else:
+                user = User(username, password)
+                user.print()
                 JOptionPane.showMessageDialog(self.frame,"Login Sucessfull","Success",JOptionPane.PLAIN_MESSAGE) 
 
 
@@ -98,6 +101,5 @@ class Init(object):
     def connect(self):
         self.conn = zxJDBC.connect("jdbc:mysql://localhost/accounts", "root", "", "com.mysql.jdbc.Driver")
         self.connection = self.conn.cursor()
-
 
 Init()
