@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/static/style.css">
+<link href='https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css'>
+<link rel="shortcut icon" type="image/png" href="/static/favicon.png"/>
+<title>Register</title>
+<div class="container">
+    {% if type == 'SUCCESS' %}
+        <div class="block">
+            <p class="sucess">User sucessfully Registered. <a href="/">Click Here</a> to Login</p>
+        </div>
+    {% else %}
+        <div class="block">
+            <div class="img">
+                <img src="/static/favicon.png" alt="logo">
+                <p class="title">XYZ Bank</p>
+            </div>
+            <form action="" method="POST">
+                <input type="text" required placeholder="Username" name="username">
+                <input type="password" required name="password" placeholder="Password">
+                <input type="password" required placeholder="Confirm Password" name="repassword">
+
+                {% if type == 'FAILED' %}
+                    <p class="danger">{{ message }}</p>
+                {% endif %}
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    {% endif %}
+</div>

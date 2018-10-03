@@ -1,0 +1,73 @@
+* {
+    font-family: 'Product Sans', 'Courier New', Courier, monospace;
+}
+
+body {
+    background-image: url('https://i0.wp.com/ficedu.org/wp-content/uploads/2016/07/Savin-NY-Website-Background-Web.jpg');
+    background-size: cover;
+    min-height: 90vh;
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    padding: 15px;
+    padding-bottom: 45px;
+    min-width: 480px;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    display: block;
+    font-size: 17px;
+    padding: 7px;
+    margin: 5px 0;
+}
+
+p {
+    text-align: center;
+    font-size: 15px;
+}
+
+p.danger {
+    color: red;
+}
+
+p.success {
+    color: green;
+}
+
+div.img {
+    text-align: center;
+}
+
+div.img img {
+    width: 64px;
+}
+
+p.title {
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+button[type=submit] {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #4527a0;
+    border: none;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+}
