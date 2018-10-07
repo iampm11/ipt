@@ -4,8 +4,22 @@
 - You are born an Original, so don't Copy Code.
 - That said, Use the code at your own risk.
 + Please don't Ctrl+C, Create something Ctrl+N
-- Exp 8 is not ready... YET.
 ```
+
+## Experiment List
+---
+1. JNI Object Passing - Exp 1
+2. JNI Sorting Array - Exp 2
+3. JNI DataType - Exp 3
+4. Non-Visual Bean - Exp 4
+6. Visual Bean - Exp 5
+7. Stateful Bean - Exp 6
+8. Stateless Bean - Exp 7
+9. Entity Bean - xtra/BankApplication
+10. JMS Sender/Receiver - Exp 8
+11. JMS Publisher/Subscriber - xtra/JMSChat
+12. Jython - Exp 9
+13. Django - Exp 10
 
 ## Folder Structure
 ---
